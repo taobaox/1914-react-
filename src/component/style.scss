@@ -1,0 +1,23 @@
+.base-layout{
+  height: 100%;
+  .ant-layout-sider{
+    background-color: rgba(50,64,87,1);
+    .ant-menu-root{
+      background-color: rgba(50,64,87,1);
+    }
+  }
+}
+
+.header {
+  background-color: #fff;
+  .bread_header{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.content {
+  padding: 16px;
+  overflow-y: auto;
+}

@@ -1,11 +1,20 @@
 import React from 'react'
-import PageLayout from './component/PageLayout'
-import { HashRouter as Router, Route } from 'react-router-dom'
+import PageLayout from '@/component/PageLayout'
+import Login from '@/views/Login'
+import PrivateRoute from '@/component/PrivateRoute'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './store/index'
 const App = () => {
   return(
-    <Router>
-      <Route path='/' component={PageLayout}></Route>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route path='/login' component={Login}></Route>
+          <PrivateRoute path='/' component={PageLayout}></PrivateRoute>
+        </Switch>
+      </Router>
+    </Provider>
   )
 }
 export default App

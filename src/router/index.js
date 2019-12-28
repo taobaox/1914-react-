@@ -1,7 +1,6 @@
 import Home from '../views/Home'
 import UserInfo from '../views/user/UserInfo'
 import UserList from '../views/user/UserList'
-// import { Route } from 'react-router-dom'
 
 const routes = [
   {
@@ -19,7 +18,7 @@ const routes = [
     component:null,
     key:'sub1',
     icon:'user',
-    text:'用户中心',
+    text:'数据管理',
     sub:[
       {
         id:201,
@@ -31,37 +30,124 @@ const routes = [
       {
         id:202,
         key:'2-2',
-        text:'用户信息',
-        path:'/userinfo',
+        text:'商家列表',
+        path:'/userinfo2',
+        component:UserInfo
+      },
+      {
+        id:203,
+        key:'2-3',
+        text:'食品列表',
+        path:'/userinfo3',
+        component:UserInfo
+      },
+      {
+        id:204,
+        key:'2-4',
+        text:'订单列表',
+        path:'/userinfo4',
+        component:UserInfo
+      },
+      {
+        id:205,
+        key:'2-5',
+        text:'管理员列表',
+        path:'/userinfo5',
         component:UserInfo
       }
     ]
   },
   {
     id:3,
-    path:'/aaa',
-    component:null,
-    key:'3',
-    icon:'pie-chart',
-    text:'测试导航A',
-    sub:[]
-  },
-  {
-    id:4,
-    path:'/bbb',
+    path:null,
     component:null,
     key:'sub2',
     icon:'pie-chart',
-    text:'测试导航B',
+    text:'添加数据',
     sub:[
       {
-        id:202,
-        key:'4-2',
-        text:'测试导航B1',
+        id:301,
+        key:'3-1',
+        text:'商家列表',
+        path:'/addshop',
+        component:UserInfo
+      },
+      {
+        id:302,
+        key:'3-2',
+        text:'添加商铺',
+        path:'/addshop2',
+        component:UserInfo
+      }
+    ]
+  },
+  {
+    id:4,
+    path:'/tb',
+    component:null,
+    key:'sub3',
+    icon:'pie-chart',
+    text:'图标',
+    sub:[
+      {
+        id:401,
+        key:'4-1',
+        text:'用户分布',
         path:'/ccc',
         component:UserInfo
       }
     ]
+  },
+  {
+    id:5,
+    path:'/edit',
+    component:null,
+    key:'sub4',
+    icon:'pie-chart',
+    text:'编辑',
+    sub:[
+      {
+        id:501,
+        key:'5-1',
+        text:'文本编辑',
+        path:'/ddd',
+        component:UserInfo
+      }
+    ]
+  },
+  {
+    id:6,
+    path:'/edit',
+    component:null,
+    key:'sub5',
+    icon:'pie-chart',
+    text:'设置',
+    sub:[
+      {
+        id:601,
+        key:'6-1',
+        text:'管理员设置',
+        path:'/eee',
+        component:UserInfo
+      }
+    ]
+  },
+  {
+    id:7,
+    path:'/sm',
+    component:null,
+    key:'sub6',
+    icon:'pie-chart',
+    text:'说明',
+    sub:[
+      {
+        id:701,
+        key:'7-1',
+        text:'说明',
+        path:'/fff',
+        component:UserInfo
+      }
+    ]    
   }
 ]
 export default routes
